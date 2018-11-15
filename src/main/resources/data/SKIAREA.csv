@@ -1,0 +1,64 @@
+ENTITY_ID;NAME;REGION;COMMUNES_IN_AREA;MASL_MIN;MASL_MAX;SKI_RUNS_KM;DRAG_LIFTS;CHAIR_LIFTS;CABLE_CARS;LIFTS_TOTAL;OPEN_LIFTS;SNOW_DEPTH_CM;VISITORS_TODAY;CAR_FREE;FUNPARK_AVAILABLE;IMAGE_URL
+101;Matterhorn Ski Paradise;Waadt und Wallis;Zermatt, Valtournenche (I), Breuil-Cervinia (I);1601;3900;252.0;11;20;19;50;0;300;0;true;true;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJN2DnHKqP_clffS7UfxMIqZg8NTDIx0QZZGZ2QXpwyylNPYdT
+102;Les portes du soleil;Waadt und Wallis;Morgins, Champéry, Les Crosets usw.;1000;2500;426.0;114;78;12;204;0;0;0;true;true;https://static3.bergfex.com/images/downsized/39/b523b5813cdadf39_338defd7cfc4284d.jpg
+103;Verbier – Les quatre vallées;Waadt und Wallis;Verbier, Nendaz, Veysonnaz u. a.;821;3330;164.0;50;32;18;100;0;0;0;true;true;https://cdn.thegentlemansjournal.com/wp-content/uploads/2012/02/Verbier-Skiing-Switzerland-900x600-c-center.jpg
+104;Val d’Anniviers;Waadt und Wallis;Grimentz, Zinal, Vercorin, St-Luc und Chandolin;1340;3025;230.0;37;3;4;44;0;0;0;true;true;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsWX0eBMYChNZJgC--rlT7UN5wJ75131YEbX2i_kFGzjcr4DPgzg
+105;Crans Montana;Waadt und Wallis;Crans, Barzettes, Montana, Aminona;1500;3000;72.0;30;10;7;47;0;0;0;true;true;https://ski.ticketcorner.ch/cmsstatic/crans-montana-aminina-3-gallery.jpg
+106;Anzère;Waadt und Wallis;Anzère;1500;2360;58.0;0;13;0;13;0;0;0;true;true;https://static1.bergfex.com/images/downsized/b7/a1ed430efbcaa1b7_c59a694ae3830f1a.jpg
+107;Saas-Fee;Waadt und Wallis;Saas-Fee, Saas Almagell, Saas Grund;1470;3600;145.0;21;7;9;37;0;0;0;true;true;https://media.schneemenschen.de/image/db/157502_skifahrer-in-saas-fee.jpeg
+108;Aletsch Arena;Waadt und Wallis;Riederalp, Bettmeralp, Fiescheralp;1050;3118;104.0;0;35;0;35;0;0;0;true;true;https://media.schneemenschen.de/image/db/165458_Aletsch_zubringerbahn.jpeg
+109;Leysin;Waadt und Wallis;Leysin, Les Mosses, La Lecherette;1253;2200;100.0;19;7;3;29;0;0;0;true;true;https://media.schneemenschen.de/image/db/199765_snowpark_leysin.jpeg
+110;Les Diablerets;Waadt und Wallis;Les Diablerets;1200;2971;80.0;27;10;8;45;0;0;0;true;true;https://media.schneemenschen.de/image/db/157434_mont-blanc.jpeg
+111;Leukerbad;Waadt und Wallis;Leukerbad;1411;2800;60.0;9;1;3;13;0;0;0;true;true;https://media.schneemenschen.de/image/db/199341_bergstation_torrent.jpeg
+112;Grächen/St.Niklaus;Waadt und Wallis;Grächen;1617;2868;40.0;3;5;2;10;0;0;0;true;true;https://media.schneemenschen.de/image/db/113105.jpeg
+113;Lötschental;Waadt und Wallis;Wiler (Lötschen);1375;3111;33.0;2;2;1;5;0;0;0;true;true;https://media.schneemenschen.de/image/db/199140_laubernalp_skifahrer.jpeg
+114;Gstaad und Umgebung;Berner Oberland;Gstaad;1200;2971;250.0;0;69;0;69;0;0;0;true;true;https://media.schneemenschen.de/image/db/199746_sesselbahn_wasserngrat.jpeg
+115;Jungfrauregion;Berner Oberland;Mürren, Wengen, Grindelwald;943;2970;213.0;19;14;6;39;0;0;0;true;true;https://media.schneemenschen.de/image/db/155895_skifahrer-vor-eiger-moench-und-jungfrau.jpeg
+116;Adelboden-Lenk;Berner Oberland;Adelboden, Lenk, Frutigen;1068;2330;205.0;36;7;8;51;0;0;0;true;true;https://media.schneemenschen.de/image/db/218866_metschstandexpress-adelboden.jpeg
+117;Meiringen-Hasliberg;Berner Oberland;Meiringen, Hasliberg;602;2433;60.0;6;4;6;16;0;0;0;true;true;https://media.schneemenschen.de/image/db/200029_gondel_maegisalp.jpeg
+118;Gotthard Oberalp Arena;Zentralschweiz;Andermatt, Sedrun (Graubünden);1400;2963;125.0;11;7;2;20;0;0;0;true;true;https://media.schneemenschen.de/image/db/219095_andermatt_apres_ski_zug.jpeg
+119;Engelberg Titlis;Zentralschweiz;Engelberg;1050;3020;42.0;0;24;0;24;0;0;0;true;true;https://media.schneemenschen.de/image/db/178163_rotair_titlis.jpeg
+120;Sörenberg;Zentralschweiz;Sörenberg, Flühli;1166;2350;50.0;17;2;3;22;0;0;0;true;true;https://media.schneemenschen.de/image/db/199782_freeride_rothorn.jpeg
+121;Hoch-Ybrig;Zentralschweiz;Oberiberg, Unteriberg;900;1938;50.0;6;4;1;11;0;0;0;true;true;https://media.schneemenschen.de/image/db/199768_bergstation_laucheren.jpeg
+122;Stoos;Zentralschweiz;Stoos;1300;1935;35.0;3;3;2;8;0;0;0;true;true;https://media.schneemenschen.de/image/db/199691_kinderskiland_stoos.jpeg
+123;Melchsee-Frutt;Zentralschweiz;Melchsee-Frutt;1200;2255;32.0;7;4;2;13;0;0;0;true;true;https://media.schneemenschen.de/image/db/199717_melchsee-frutt.jpeg
+124;Brunni-Alpthal;Zentralschweiz;Brunni, Alpthal;1098;1500;20.0;5;0;1;6;0;0;0;true;true;https://media.schneemenschen.de/image/db/199495_brunni-holzegg.jpeg
+125;Engadin - St. Moritz;Graubünden;St. Moritz, Silvaplana, Sils Maria, Pontresina, Celerina, Zuoz, Maloja;1768;3303;130.0;11;29;16;56;0;0;0;true;true;https://media.schneemenschen.de/image/db/156916_beleuchtete-skipiste.jpeg
+126;Davos Klosters Mountains;Graubünden;Davos, Klosters;814;2844;320.0;14;6;5;25;0;0;0;true;true;https://media.schneemenschen.de/image/db/218700_skigebiet_parsenn.jpeg
+127;Arosa Lenzerheide;Graubünden;Arosa, Lenzerheide, Valbella, Parpan, Churwalden;1230;2865;225.0;16;18;7;41;0;0;0;true;true;https://media.schneemenschen.de/image/db/166012_sonnenuntergang_lenzerheide.jpeg
+128;Laax (Skigebiet);Graubünden;Flims, Laax, Falera;1000;3018;166.0;12;7;11;30;0;0;0;true;true;https://media.schneemenschen.de/image/db/157444_laax-snowpark.jpeg
+129;Silvretta Arena;Graubünden;Samnaun, Ischgl (Österreich);1700;2900;200.0;16;21;5;42;0;0;0;true;true;https://media.schneemenschen.de/image/db/202033_ischgl_snowpark.jpeg
+130;Gotthard Oberalp Arena;Graubünden;Sedrun, Andermatt (Uri);1400;2963;125.0;11;7;2;20;0;0;0;true;true;https://media.schneemenschen.de/image/db/219098_naetsch_restaurant_thumb.jpeg
+131;Obersaxen-Mundaun;Graubünden;Obersaxen, Surcuolm Vella GR;1201;2310;120.0;8;9;0;17;0;0;0;true;true;https://media.schneemenschen.de/image/db/204170_bergstation_obersaxen.jpeg
+132;Savognin Bergbahnen;Graubünden;Savognin;1207;2713;80.0;6;2;1;9;0;0;0;true;true;https://media.schneemenschen.de/image/db/199115_gondelbahn_savognin.jpeg
+133;Motta Naluns Scuol;Graubünden;Scuol;1250;2800;80.0;8;5;2;15;0;0;0;true;true;https://media.schneemenschen.de/image/db/200355_bergstation_motta-naluns.jpeg
+134;Brigels-Waltensburg-Andiast;Graubünden;Brigels, Waltensburg, Andiast;1100;2418;75.0;4;5;0;9;0;0;0;true;true;https://media.schneemenschen.de/image/db/204065_schneebar_brigels.jpeg
+135;Disentis;Graubünden;Disentis;1150;2903;60.0;5;3;1;9;0;0;0;true;true;https://media.schneemenschen.de/image/db/200197_gondelbahn_disentis3000.jpeg
+136;Bivio;Graubünden;Bivio;1769;2560;30.0;4;0;0;4;0;0;0;true;true;https://media.schneemenschen.de/image/db/200448_winterwandern_bivio.jpeg
+137;Grüsch-Danusav;Graubünden;Grüsch;1200;1800;30.0;3;1;2;6;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+138;Splügen Tambo;Graubünden;Splügen;1480;2215;30.0;3;2;2;7;0;0;0;true;true;https://media.schneemenschen.de/image/db/200349_pistenplan_spluegen.jpeg
+139;Tschiertschen;Graubünden;Tschiertschen, Praden;1350;2400;27.0;2;2;0;4;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+140;Darlux Bergün;Graubünden;Bergün;1373;2572;25.0;3;2;0;5;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+141;Minschuns Val Müstair;Graubünden;Val Müstair/Münstertal;2000;2700;25.0;4;0;0;4;0;0;0;true;true;https://media.schneemenschen.de/image/db/200403_skilift-vallatscha_minschuns.jpeg
+142;Tschappina Heinzenberg;Graubünden;Tschappina, Urmein;1550;2182;25.0;6;0;0;6;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+143;Vals;Graubünden;Vals GR;1280;2941;25.0;3;0;1;4;0;0;0;true;true;https://media.schneemenschen.de/image/db/200477_vals3000.jpeg
+144;Hochwang St. Peter;Graubünden;St. Peter GR, Pagig;1480;2280;22.0;2;1;0;3;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+145;Chur Brambrüesch;Graubünden;Chur, Malix;1170;2200;20.0;2;1;2;5;0;0;0;true;true;https://media.schneemenschen.de/image/db/200170_gondelbahn_brambueesch.jpeg
+146;Sarn Heinzenberg;Graubünden;Sarn;1300;2075;20.0;2;1;0;3;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+147;Fideriser Heuberge;Graubünden;Fideris;2000;2350;13.0;4;0;0;4;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+148;Feldis;Graubünden;Feldis, Rhäzüns;1500;2000;10.0;0;1;1;2;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+149;Avers;Graubünden;Avers GR;2000;2600;8.0;3;0;0;3;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+150;Pany Luzein;Graubünden;Pany, Luzein;1330;1550;7.0;2;0;0;2;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+151;San Bernardino Pian Cales2;Graubünden;San Bernardino GR;1620;1782;5.0;2;0;0;2;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+152;Tenna;Graubünden;Tenna;1654;2104;4.0;1;0;0;1;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+153;St. Antönien;Graubünden;St. Antönien;1420;1650;3.0;2;0;0;2;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+154;Mutten;Graubünden;Mutten, Obermutten;1700;2000;3.0;1;0;0;1;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+155;Flumserberg;Ostschweiz;Flumserberg, Unterterzen;1000;2222;65.0;5;8;4;17;0;0;0;true;true;https://media.schneemenschen.de/image/db/200156_leist_flumserberg.jpeg
+156;Toggenburg;Ostschweiz;Wildhaus, Unterwasser, Alt St. Johann;900;2262;60.0;12;4;3;19;0;0;0;true;true;https://media.schneemenschen.de/image/db/200172_wolzenalp_schlepplift.jpeg
+157;Pizol;Ostschweiz;Bad Ragaz, Wangs;900;2226;40.0;5;3;4;12;0;0;0;true;true;https://media.schneemenschen.de/image/db/200324_sessellift_pizol.jpeg
+158;Kerenzerberg;Ostschweiz;Kerenzerberg, Filzbach;740;1280;3.0;2;0;0;2;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+159;Airolo-Pesciüm;Tessin;Airolo, Nante TI;1175;2255;30.0;5;1;2;8;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+160;Bosco Gurin;Tessin;Bosco Gurin, Cevio;1480;2400;30.0;4;2;0;6;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+161;Carì;Tessin;Carì, Faido;1650;2000;20.0;2;2;0;4;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+162;Nara;Tessin;Acquarossa, Cancorì, Leontica;875;2153;30.0;5;2;0;7;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg
+163;Cardada-Cimetta;Tessin;Locarno, Orselina;1340;1670;5.4;3;1;1;5;0;0;0;true;true;https://www.20min.ch/diashow/70431/70431-fj3pHi2hA7v_5BwjrxGc6A.jpg

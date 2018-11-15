@@ -1,0 +1,68 @@
+group 'ch.fhnw'
+version '0.1-SNAPSHOT'
+
+buildscript {
+	dependencies {
+		classpath group: 'de.dynamicfiles.projects.gradle.plugins', name: 'javafx-gradle-plugin', version: '8.9.0-SNAPSHOT'
+	}
+	repositories {
+		mavenLocal()
+		mavenCentral()
+		maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+	}
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+apply plugin: 'application'
+apply plugin: 'javafx-gradle-plugin'
+
+sourceCompatibility = JavaVersion.VERSION_1_10
+targetCompatibility = JavaVersion.VERSION_1_10
+
+compileJava.options.encoding = 'UTF-8'
+
+mainClassName = 'ch.fhnw.oop2.skiareasfx.SkiAreasApp'
+
+repositories {
+	mavenCentral()
+	jcenter()
+}
+
+sourceSets {
+	main {
+		resources {
+			srcDirs = ["src/main/java", "src/main/resources"]
+		}
+	}
+}
+
+dependencies {
+	testCompile('org.junit.jupiter:junit-jupiter-api:5.3.1')
+	testCompile('org.junit.jupiter:junit-jupiter-params:5.3.1')
+	testRuntime('org.junit.jupiter:junit-jupiter-engine:5.3.1')
+}
+
+test {
+	useJUnitPlatform()
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
+}
+
+jfx {
+	mainClass = mainClassName
+	appName = 'SkiAreasFX'
+	jfxMainAppJarName = 'skiareasfx.jar'
+	vendor = 'FHNW'
+	bundler = 'ALL'
+	bundleArguments = [
+			installdirChooser  : 'true',
+			dropinResourcesRoot: './src/main/deploy'
+	]
+}
+
+
