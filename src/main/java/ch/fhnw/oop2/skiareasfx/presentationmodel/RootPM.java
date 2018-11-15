@@ -4,7 +4,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class RootPM {
-    private final StringProperty applicationTitle = new SimpleStringProperty("SkiAreaFX");
+    private final StringProperty applicationTitle = new SimpleStringProperty("SkiAreasFX");
     private final StringProperty greeting         = new SimpleStringProperty("Hello World!");
 
     // all getters and setters
