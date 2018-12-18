@@ -1,6 +1,5 @@
 package ch.fhnw.oop2.skiareasfx.view;
 
-import ch.fhnw.oop2.skiareasfx.presentationmodel.Skiarea;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.SplitPane;
@@ -14,7 +13,7 @@ public class ApplicationUI extends BorderPane implements ViewMixin {
     private Button button;
     private SplitPane splitContentArea;
     private ContentLeft skiAreaTable;
-    private SkiAreaDetails skiAreaDetails;
+    private ContentRight skiAreaDetails;
 
     public ApplicationUI(RootPM model) {
         this.model = model;
@@ -31,7 +30,7 @@ public class ApplicationUI extends BorderPane implements ViewMixin {
         button = new Button("Hello");
         toolbar = new ToolbarHeader();
         skiAreaTable = new ContentLeft(model);
-        skiAreaDetails = new SkiAreaDetails();
+        skiAreaDetails = new ContentRight(model);
 
         splitContentArea = new SplitPane(skiAreaTable, skiAreaDetails);
         //add Split Pane here with the two sides (GridPane) as attributes)
