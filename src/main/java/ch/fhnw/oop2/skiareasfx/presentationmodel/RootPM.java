@@ -79,4 +79,9 @@ public class RootPM {
     public void setGreeting(String greeting) {
         this.greeting.set(greeting);
     }
+
+    public ObservableList<Skiarea> getSkiareas() {
+        return skiareas;
+    }
+
 }

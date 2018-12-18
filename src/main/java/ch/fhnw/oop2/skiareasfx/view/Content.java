@@ -7,6 +7,7 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.layout.StackPane;
 
 public class Content extends StackPane implements ViewMixin {
+    private Button stackPaneButton;
 
     public Content() {
         init();
@@ -14,9 +15,11 @@ public class Content extends StackPane implements ViewMixin {
 
     @Override
     public void initializeControls() {
+        stackPaneButton = new Button("StackPane");
     }
 
     @Override
     public void layoutControls() {
+        getChildren().addAll(stackPaneButton);
     }
 }

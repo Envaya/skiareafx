@@ -1,21 +1,23 @@
 package ch.fhnw.oop2.skiareasfx.view;
 
+import ch.fhnw.oop2.skiareasfx.presentationmodel.Skiarea;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.SplitPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
 
 import ch.fhnw.oop2.skiareasfx.presentationmodel.RootPM;
 
 public class ApplicationUI extends BorderPane implements ViewMixin {
-    private final RootPM rootPM;
+    private final RootPM model;
     private ToolbarHeader toolbar;
     private Button button;
-    private Content contentArea;
+    private SplitPane splitContentArea;
+    private ContentLeft skiAreaTable;
+    private SkiAreaDetails skiAreaDetails;
 
     public ApplicationUI(RootPM model) {
-        this.rootPM = model;
+        this.model = model;
         init();
     }
 
@@ -26,10 +28,12 @@ public class ApplicationUI extends BorderPane implements ViewMixin {
 
     @Override
     public void initializeControls() {
-        button = new Button();
+        button = new Button("Hello");
         toolbar = new ToolbarHeader();
-        // Stackpane for the content in the center
-        contentArea = new Content();
+        skiAreaTable = new ContentLeft(model);
+        skiAreaDetails = new SkiAreaDetails();
+
+        splitContentArea = new SplitPane(skiAreaTable, skiAreaDetails);
         //add Split Pane here with the two sides (GridPane) as attributes)
     }
 
@@ -37,12 +41,11 @@ public class ApplicationUI extends BorderPane implements ViewMixin {
     public void layoutControls() {
         setMargin(button   , new Insets(5));
         setTop(toolbar);
-        setCenter(contentArea);
-
+        setCenter(splitContentArea);
     }
 
     @Override
     public void setupBindings() {
-        button.textProperty().bind(rootPM.greetingProperty());
+        button.textProperty().bind(model.greetingProperty());
     }
 }
