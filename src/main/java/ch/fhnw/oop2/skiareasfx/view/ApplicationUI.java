@@ -1,18 +1,21 @@
 package ch.fhnw.oop2.skiareasfx.view;
 
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 
 import ch.fhnw.oop2.skiareasfx.presentationmodel.RootPM;
 
-public class RootPanel extends StackPane implements ViewMixin {
+public class ApplicationUI extends BorderPane implements ViewMixin {
     private final RootPM rootPM;
-
+    private ToolbarHeader toolbar;
     private Button button;
+    private Content contentArea;
 
-    public RootPanel(RootPM model) {
+    public ApplicationUI(RootPM model) {
         this.rootPM = model;
-
         init();
     }
 
@@ -24,11 +27,18 @@ public class RootPanel extends StackPane implements ViewMixin {
     @Override
     public void initializeControls() {
         button = new Button();
+        toolbar = new ToolbarHeader();
+        // Stackpane for the content in the center
+        contentArea = new Content();
+        //add Split Pane here with the two sides (GridPane) as attributes)
     }
 
     @Override
     public void layoutControls() {
-        getChildren().add(button);
+        setMargin(button   , new Insets(5));
+        setTop(toolbar);
+        setCenter(contentArea);
+
     }
 
     @Override
