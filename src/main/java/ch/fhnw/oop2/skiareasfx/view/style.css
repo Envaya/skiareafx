@@ -1,3 +1,7 @@
 .root {
-    -fx-padding: 20px;
+}
+
+.toolbarHeader {
+    -fx-background-color: #5DBCD2;
+    -fx-padding: 10px;
 }
