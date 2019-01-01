@@ -45,6 +45,5 @@ public class ApplicationUI extends BorderPane implements ViewMixin {
 
     @Override
     public void setupBindings() {
-        button.textProperty().bind(model.greetingProperty());
     }
 }
