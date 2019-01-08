@@ -16,6 +16,7 @@ public class SkiAreasApp extends Application {
 		Parent rootPanel = new ApplicationUI(rootPM);
 
 		Scene scene = new Scene(rootPanel);
+        scene.getStylesheets().add("https://fonts.googleapis.com/css?family=Heebo");
 
 		primaryStage.titleProperty().bind(rootPM.applicationTitleProperty());
 		primaryStage.setScene(scene);

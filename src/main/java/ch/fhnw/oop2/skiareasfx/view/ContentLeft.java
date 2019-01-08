@@ -27,13 +27,16 @@ public class ContentLeft extends VBox implements ViewMixin {
         TableColumn<Skiarea, String> regionColumn = new TableColumn<>("Region");
         regionColumn.setCellValueFactory(cell -> cell.getValue().regionProperty());
 
+        TableColumn<Skiarea, Number> totalLiftsColumn = new TableColumn<>("Lifte");
+        totalLiftsColumn.setCellValueFactory(cell -> cell.getValue().LIFTS_TOTALProperty());
+
         TableColumn<Skiarea, Number> skiRunsLengthColumn = new TableColumn<>("Pistenlänge");
         skiRunsLengthColumn.setCellValueFactory(cell -> cell.getValue().SKI_RUNS_KMProperty());
 
         TableColumn<Skiarea, Number> snowDepthColumn = new TableColumn<>("Schneetiefe");
         snowDepthColumn.setCellValueFactory(cell -> cell.getValue().SNOW_DEPTH_CMProperty());
 
-        skiareaTable.getColumns().addAll(nameColumn, regionColumn, skiRunsLengthColumn, snowDepthColumn);
+        skiareaTable.getColumns().addAll(nameColumn, regionColumn, totalLiftsColumn, skiRunsLengthColumn, snowDepthColumn);
 
         skiareaTable.setItems(model.getAllSkiAreas());
         skiareaTable.getSortOrder().setAll(nameColumn);
@@ -51,6 +54,5 @@ public class ContentLeft extends VBox implements ViewMixin {
                 .addListener((observable, oldValue, newValue) -> {
                     model.selectedSkiAreaIdProperty().setValue(newValue.getId());
                 });
-
     }
 }

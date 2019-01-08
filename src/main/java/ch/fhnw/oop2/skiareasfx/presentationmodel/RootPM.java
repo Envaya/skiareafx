@@ -99,12 +99,18 @@ public class RootPM {
         skiAreaProxy.idProperty().bind(skiarea.idProperty());
         skiAreaProxy.skiareaNameProperty().bindBidirectional(skiarea.skiareaNameProperty());
         skiAreaProxy.regionProperty().bindBidirectional(skiarea.regionProperty());
+        skiAreaProxy.OPEN_LIFTSProperty().bindBidirectional(skiarea.OPEN_LIFTSProperty());
+        skiAreaProxy.LIFTS_TOTALProperty().bindBidirectional(skiarea.LIFTS_TOTALProperty());
+        skiAreaProxy.regionProperty().bindBidirectional(skiarea.regionProperty());
     }
 
-    private void unbindFromProxy(Skiarea country) {
+    private void unbindFromProxy(Skiarea skiarea) {
         skiAreaProxy.idProperty().unbind();
-        skiAreaProxy.skiareaNameProperty().unbindBidirectional(country.skiareaNameProperty());
-        skiAreaProxy.regionProperty().unbindBidirectional(country.regionProperty());
+        skiAreaProxy.skiareaNameProperty().unbindBidirectional(skiarea.skiareaNameProperty());
+        skiAreaProxy.regionProperty().unbindBidirectional(skiarea.regionProperty());
+        skiAreaProxy.OPEN_LIFTSProperty().unbindBidirectional(skiarea.OPEN_LIFTSProperty());
+        skiAreaProxy.LIFTS_TOTALProperty().unbindBidirectional(skiarea.LIFTS_TOTALProperty());
+        skiAreaProxy.regionProperty().unbindBidirectional(skiarea.regionProperty());
     }
 
     private Skiarea getSkiarea(int id) {

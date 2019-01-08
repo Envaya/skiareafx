@@ -2,6 +2,24 @@
 }
 
 .toolbarHeader {
-    -fx-background-color: #5DBCD2;
+    /*-fx-background-color: #5DBCD2;*/
     -fx-padding: 10px;
+    -fx-background-image: url("matternhorn.jpg");
+    -fx-background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -fx-background-position: center;
+}
+
+.content-left-container {
+    -fx-padding: 10px;
+}
+
+.skiarea-header-container {
+    -fx-padding: 10px;
+    -fx-min-height: 100px;
+}
+
+.skiarea-header-title {
+    -fx-font-size: 40px;
+    -fx-font-family: Heebo;
 }

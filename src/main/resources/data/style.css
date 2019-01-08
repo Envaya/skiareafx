@@ -1,0 +1,57 @@
+.slim-value-display {
+    -fx-padding         : 2;
+    -fx-background-color: transparent;
+    -base-color         : green;
+    -bar-background     : gray;
+
+}
+
+
+.slim-value-display .title {
+    -fx-font-size  : 16;
+    -fx-fill       : black;
+}
+
+.slim-value-display .value {
+    -fx-font-size  : 48;
+    -fx-fill       : black;
+}
+
+.slim-value-display .unit {
+    -fx-font-size  : 18;
+    -fx-fill       : rgb(141, 147, 151);
+}
+
+.slim-value-display .bar-background {
+    -fx-fill        : transparent;
+    -fx-stroke      : -bar-background;
+    -fx-stroke-width: 15;
+    -fx-stroke-type : centered;
+}
+
+.slim-value-display .bar{
+    -fx-fill           : transparent;
+    -fx-stroke         : -base-color;
+    -fx-stroke-width   : 15;
+    -fx-stroke-type    : centered;
+    -fx-stroke-line-cap: round;
+}
+
+.slim-value-display .bar2{
+    -fx-fill           : transparent;
+    -fx-stroke         : yellow;
+    -fx-stroke-width   : 15;
+    -fx-stroke-type    : centered;
+    -fx-stroke-line-cap: round;
+}
+
+.slim-value-display .bar3{
+    -fx-fill           : transparent;
+    -fx-stroke         : red;
+    -fx-stroke-width   : 15;
+    -fx-stroke-type    : centered;
+    -fx-stroke-line-cap: round;
+}
+
+
+

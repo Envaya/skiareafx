@@ -23,16 +23,23 @@ public class SkiAreaHeader extends GridPane implements ViewMixin {
     }
 
     @Override
+    public void initializeSelf() {
+//        getStyleClass().add("skiarea-header-container");
+    }
+
+    @Override
     public void initializeControls() {
         regionName = new Label();
         skiAreaName = new Label();
+        skiAreaName.getStyleClass().add("skiarea-header-title");
     }
 
     @Override
     public void layoutControls() {
-        ColumnConstraints colConstr = new ColumnConstraints();
-        colConstr.setHgrow(Priority.ALWAYS);
-        getColumnConstraints().addAll(colConstr, colConstr);
+        ColumnConstraints colConstr50 = new ColumnConstraints();
+        colConstr50.setPercentWidth(50);
+//        colConstr.setHgrow(Priority.ALWAYS);
+        getColumnConstraints().addAll(colConstr50);
 
         RowConstraints rowConstr = new RowConstraints();
         rowConstr.setVgrow(Priority.ALWAYS);

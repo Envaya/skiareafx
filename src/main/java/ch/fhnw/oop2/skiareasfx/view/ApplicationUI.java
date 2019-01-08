@@ -31,6 +31,7 @@ public class ApplicationUI extends BorderPane implements ViewMixin {
         toolbar = new ToolbarHeader();
         skiAreaTable = new ContentLeft(model);
         skiAreaDetails = new ContentRight(model);
+        skiAreaDetails.getStyleClass().add("content-left-container");
 
         splitContentArea = new SplitPane(skiAreaTable, skiAreaDetails);
         //add Split Pane here with the two sides (GridPane) as attributes)
