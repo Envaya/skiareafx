@@ -1,0 +1,67 @@
+skiregioncontrol {
+    -fx-padding: 3;
+    -fx-background-color: white;
+}
+
+.skiregioncontrol SVGPath,
+.skiregioncontrol Polygon {
+    -fx-stroke: #899aa7;
+    -fx-stroke-width: 1px;
+    -fx-fill: #d6e1ff;
+}
+
+.skiregioncontrol SVGPath:hover,
+.skiregioncontrol Polygon:hover {
+    -fx-cursor: hand;
+    -fx-fill: #5e5e5e;
+}
+
+.skiregioncontrol .CH {
+    -fx-fill: #e8f4fd;
+    -fx-stroke: #899aa7;
+}
+
+.skiregioncontrol .selected {
+    -fx-fill: rgba(10, 12, 125, 0.75);
+}
+.skiregioncontrol .selected:hover {
+    -fx-fill: #5e5e5e;
+}
+
+.skiregioncontrol .skiregionDropdown {
+    -fx-text-alignment: left;
+    -fx-alignment: center;
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+    -fx-text-box-border: transparent;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.skiregioncontrol .skiregionDropdown .combo-box-popup > .list-view {
+    -fx-pref-width: 330;
+    -fx-background-color: #e8f4fd;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 12, 0.0 , 0 , 8 );
+}
+
+.skiregioncontrol .skiregionDropdown .list-cell {
+    -fx-background: white;
+    -fx-background-color: transparent;
+    -fx-text-fill: #899aa7;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em;
+}
+
+
+.skiregioncontrol .clear {
+    -fx-font-size: 14px;
+    -fx-text-fill: grey;
+    -fx-cursor: hand;
+}
+
+.map {
+    -fx-border-color: red;
+    -fx-border-width: 5px;
+}
+

@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.scenicview.ScenicView;
 
 import ch.fhnw.oop2.skiareasfx.presentationmodel.RootPM;
 import ch.fhnw.oop2.skiareasfx.view.ApplicationUI;
@@ -17,6 +18,9 @@ public class SkiAreasApp extends Application {
 
 		Scene scene = new Scene(rootPanel);
         scene.getStylesheets().add("https://fonts.googleapis.com/css?family=Heebo");
+
+        // Inspector: remove before final push
+		ScenicView.show(scene);
 
 		primaryStage.titleProperty().bind(rootPM.applicationTitleProperty());
 		primaryStage.setScene(scene);
