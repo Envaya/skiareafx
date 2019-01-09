@@ -20,7 +20,7 @@ import java.util.stream.Stream;
 
 public class RootPM {
     private final StringProperty applicationTitle = new SimpleStringProperty("Swiss Ski Areas");
-    private final IntegerProperty selectedSkiAreaId = new SimpleIntegerProperty();
+    private final IntegerProperty selectedSkiAreaId = new SimpleIntegerProperty(-1);
 
     private static final String FILE_NAME = "SKIAREA.csv";
     private static final String DELIMITER = ";";
@@ -32,7 +32,21 @@ public class RootPM {
         //create our root pm instance, read file and add all the collected skiareas into
         //a observable list.
         //add a change listener to that list
+
         allSkiAreas.addAll(readFromFile());
+
+        if(selectedSkiAreaId.getValue().intValue() == -1) {
+            int firstSkiareaInListId;
+            Skiarea firstSkiareaInList;
+            if(!allSkiAreas.isEmpty()) {
+                 firstSkiareaInListId = allSkiAreas.get(0).idProperty().intValue();
+                 firstSkiareaInList = getSkiarea(firstSkiareaInListId);
+                if (firstSkiareaInList != null) {
+                    bindToProxy(firstSkiareaInList);
+                }
+            }
+        }
+
         //listen to when selected skiarea changes
         selectedSkiAreaIdProperty().addListener((observable, oldValue, newValue) -> {
                     Skiarea previouslySelectedSkiArea = getSkiarea(oldValue.intValue());

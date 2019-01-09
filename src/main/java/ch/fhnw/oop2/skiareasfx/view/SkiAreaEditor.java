@@ -5,33 +5,68 @@ import ch.fhnw.oop2.skiareasfx.presentationmodel.RootPM;
 import ch.fhnw.oop2.skiareasfx.presentationmodel.Skiarea;
 import ch.fhnw.oop2.skiareasfx.skiregion_cc.SkiregionControl;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.RowConstraints;
 import javafx.util.converter.NumberStringConverter;
+import javafx.scene.layout.ColumnConstraints;
 
 import java.util.Locale;
 
 public class SkiAreaEditor extends GridPane implements ViewMixin {
     private RootPM model;
+
     private Label nameLabel;
     private TextField nameField;
+
     private Label regionLabel;
     private TextField regionField;
-    private OpenLiftsGraph openLifts;
-    private Label labelOpenLifts;
-    private TextField textFieldOpenLifts;
-    private Label labelTotalLifts;
-    private TextField textFieldTotalLifts;
-    private SkiregionControl skiRegionControl;
+
     private Label communesInAreaLabel;
+    private TextField communesInAreaField;
+
     private Label metersAboveSeaMinLabel;
+    private TextField metersAboveSeaMinField;
+
     private Label metersAboveSeaMaxLabel;
+    private TextField metersAboveSeaMaxField;
+
     private Label runsKMLabel;
+    private TextField runsKMField;
+
     private Label dragLiftsLabel;
+    private TextField dragLiftsField;
+
+    private Label chairLiftsLabel;
+    private TextField chairLiftsField;
+
+    private Label cableCarsLabel;
+    private TextField cableCarsField;
+
+    private OpenLiftsGraph openLifts;
+
+    private Label snowDepthLabel;
+    private TextField snowDepthField;
+
+    private Label visitorsTodayLabel;
+    private TextField visitorsTodayField;
+
+    private Label carFreeLabel;
+    private CheckBox carFree;
+
+    private Label funparkOpenLabel;
+    private CheckBox funparkOpenField;
+
+    private Label imageURLLabel;
+    private TextField imageURLField;
+
+    private TextField textFieldOpenLifts;
+
+    private SkiregionControl skiRegionControl;
 
     public SkiAreaEditor(RootPM model) {
         this.model = model;
@@ -49,11 +84,21 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
         nameField = new TextField();
         regionLabel = new Label("Gebiet");
         regionField = new TextField();
+        communesInAreaLabel = new Label("Orte im Gebiet");
+        metersAboveSeaMinLabel = new Label("Talstation (m.ü.M)");
+        metersAboveSeaMaxLabel = new Label("Bergstation (m.ü.M.)");
+        runsKMLabel = new Label("Pistenlänge (km)");
+        dragLiftsLabel = new Label("Schlepplifte");
+        chairLiftsLabel = new Label("Sessellifte");
+        cableCarsLabel = new Label("Gondeln");
+        snowDepthLabel = new Label("Schneehöhe (cm)");
+        visitorsTodayLabel = new Label("Besucher");
+        carFreeLabel = new Label("autofrei");
+        funparkOpenLabel = new Label("Funpark geöffnet");
+        imageURLLabel = new Label("Bild URL");
+
         openLifts = new OpenLiftsGraph();
-        labelOpenLifts = new Label("geöffnet:");
         textFieldOpenLifts = new TextField();
-        labelTotalLifts = new Label("Lifte:");
-        textFieldTotalLifts = new TextField();
         skiRegionControl = new SkiregionControl();
     }
 
@@ -83,7 +128,6 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
         nameField.textProperty().bindBidirectional(proxy.skiareaNameProperty());
         regionField.textProperty().bindBidirectional(proxy.regionProperty());
         textFieldOpenLifts.textProperty().bindBidirectional(proxy.OPEN_LIFTSProperty(), new NumberStringConverter());
-        textFieldTotalLifts.textProperty().bindBidirectional(proxy.LIFTS_TOTALProperty(), new NumberStringConverter());
         openLifts.valueProperty().bindBidirectional(proxy.OPEN_LIFTSProperty());
         openLifts.maxValueProperty().bindBidirectional(proxy.LIFTS_TOTALProperty());
         skiRegionControl.skiregionProperty().bindBidirectional(proxy.regionProperty());

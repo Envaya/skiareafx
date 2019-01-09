@@ -15,7 +15,7 @@ public class Skiarea {
     private final IntegerProperty CABLE_CARS = new SimpleIntegerProperty();
     private final IntegerProperty LIFTS_TOTAL = new SimpleIntegerProperty();
     private final IntegerProperty OPEN_LIFTS = new SimpleIntegerProperty();
-    private final DoubleProperty SNOW_DEPTH_CM = new SimpleDoubleProperty();
+    private final IntegerProperty SNOW_DEPTH_CM = new SimpleIntegerProperty();
     private final IntegerProperty VISITORS_TODAY = new SimpleIntegerProperty();
     private final BooleanProperty CAR_FREE = new SimpleBooleanProperty();
     private final BooleanProperty FUNPARK_AVAILABLE = new SimpleBooleanProperty();
@@ -45,7 +45,7 @@ public class Skiarea {
                 Integer.toString(getCABLE_CARS()),
                 Integer.toString(getLIFTS_TOTAL()),
                 Integer.toString(getOPEN_LIFTS()),
-                Double.toString(getSNOW_DEPTH_CM()),
+                Integer.toString((int)getSNOW_DEPTH_CM()),
                 Integer.toString(getVISITORS_TODAY()),
                 Boolean.toString(isCAR_FREE()),
                 Boolean.toString(isFUNPARK_AVAILABLE()),
@@ -78,19 +78,21 @@ public class Skiarea {
         setId(Integer.valueOf(line[0]));
         setSkiareaName(line[1]);
         setRegion(line[2]);
-        setCOMMUNES_IN_AREA(line[2]);
-        setMETERS_ABOVE_SEA_MIN(Integer.valueOf(line[0]));
-        setMETERS_ABOVE_SEA_MAX(Integer.valueOf(line[0]));
-        setSKI_RUNS_KM(Double.valueOf(line[0]));
-        setDRAG_LIFTS(Integer.valueOf(line[0]));
-        setCHAIR_LIFTS(Integer.valueOf(line[0]));
-        setCABLE_CARS(Integer.valueOf(line[0]));
-        setLIFTS_TOTAL(Integer.valueOf(line[0]));
-        setSNOW_DEPTH_CM(Double.valueOf(line[0]));
-        setVISITORS_TODAY(Integer.valueOf(line[0]));
-        setCAR_FREE(Boolean.valueOf(line[2]));
-        setFUNPARK_AVAILABLE(Boolean.valueOf(line[2]));
-        setIMAGE_URL(line[2]);
+        setCOMMUNES_IN_AREA(line[3]);
+        setMETERS_ABOVE_SEA_MIN(Integer.valueOf(line[4]));
+        setMETERS_ABOVE_SEA_MAX(Integer.valueOf(line[5]));
+        setSKI_RUNS_KM(Double.valueOf(line[6]));
+        setDRAG_LIFTS(Integer.valueOf(line[7]));
+        setCHAIR_LIFTS(Integer.valueOf(line[8]));
+        setCABLE_CARS(Integer.valueOf(line[9]));
+        setLIFTS_TOTAL(Integer.valueOf(line[10]));
+        setOPEN_LIFTS(Integer.valueOf(line[11]));
+//        setSNOW_DEPTH_CM(Integer.valueOf(line[12]));
+        setVISITORS_TODAY(Integer.valueOf(line[13]));
+        setCAR_FREE(Boolean.valueOf(line[14]));
+        setFUNPARK_AVAILABLE(Boolean.valueOf(line[15]));
+        String s =(line[16]);
+        setIMAGE_URL(s);
     }
 
     public int getId() {
@@ -237,15 +239,15 @@ public class Skiarea {
         this.OPEN_LIFTS.set(OPEN_LIFTS);
     }
 
-    public double getSNOW_DEPTH_CM() {
+    public int getSNOW_DEPTH_CM() {
         return SNOW_DEPTH_CM.get();
     }
 
-    public DoubleProperty SNOW_DEPTH_CMProperty() {
+    public IntegerProperty SNOW_DEPTH_CMProperty() {
         return SNOW_DEPTH_CM;
     }
 
-    public void setSNOW_DEPTH_CM(double SNOW_DEPTH_CM) {
+    public void setSNOW_DEPTH_CM(int SNOW_DEPTH_CM) {
         this.SNOW_DEPTH_CM.set(SNOW_DEPTH_CM);
     }
 
