@@ -11,6 +11,8 @@ public class ToolbarHeader extends HBox implements ViewMixin {
 
     private TextField searchBar;
     private Button saveButton;
+    private Button addButton;
+    private Button deleteButton;
     private RootPM model;
 
     public ToolbarHeader(RootPM m) {
@@ -25,17 +27,20 @@ public class ToolbarHeader extends HBox implements ViewMixin {
 
     @Override
     public void initializeControls() {
-        saveButton = new Button("Save");
+        saveButton = new Button("Speichern");
+        addButton = new Button("Neu");
+        deleteButton = new Button("Löschen");
         searchBar = new TextField();
     }
 
     @Override
     public void setupEventHandlers() {
         saveButton.setOnAction(e -> model.save());
+        addButton.setOnAction(event -> model.addSkiArea());
     }
 
     @Override
     public void layoutControls() {
-        getChildren().addAll(searchBar, saveButton);
+        getChildren().addAll(searchBar, saveButton, addButton, deleteButton);
     }
 }

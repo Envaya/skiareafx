@@ -14,6 +14,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -99,6 +100,16 @@ public class RootPM {
         } catch (IOException e) {
             throw new IllegalStateException("The skiarea couldn't be saved. Please try again.");
         }
+    }
+
+    public void addSkiArea() {
+        List<Skiarea> skiAreaList = allSkiAreas.stream()
+                .sorted(Comparator.comparing(Skiarea::getId))
+                .collect(Collectors.toList());
+        Skiarea lastSkiareaInList = skiAreaList.get(skiAreaList.size() -1);
+        allSkiAreas.add(new Skiarea(lastSkiareaInList.getId() + 1));
+        selectedSkiAreaIdProperty().setValue(lastSkiareaInList.getId() + 1);
+
     }
 
     private Stream<String> getStreamOfLines(String fileName) {

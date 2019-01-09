@@ -225,28 +225,30 @@ public class SkiregionControl extends Region {
 
     private void setSelectedarea(String region) {
         removeSelected();
-        switch (region) {
-            case "Ostschweiz":
-                OST.getStyleClass().addAll("selected");
-                break;
-            case "Berner Oberland":
-                BE.getStyleClass().addAll("selected");
-                break;
-            case "Waadt und Wallis":
-                VDVS.getStyleClass().addAll("selected");
-                break;
-            case "Tessin":
-                TI.getStyleClass().addAll("selected");
-                break;
-            case "Zentralschweiz":
-                INNER.getStyleClass().addAll("selected");
-                break;
-            case "Graubünden":
-                GR.getStyleClass().addAll("selected");
-                break;
-            case "Nordschweiz/FR/GE":
-                CH.getStyleClass().addAll("selected");
-                break;
+        if (region != null) {
+            switch (region) {
+                case "Ostschweiz":
+                    OST.getStyleClass().addAll("selected");
+                    break;
+                case "Berner Oberland":
+                    BE.getStyleClass().addAll("selected");
+                    break;
+                case "Waadt und Wallis":
+                    VDVS.getStyleClass().addAll("selected");
+                    break;
+                case "Tessin":
+                    TI.getStyleClass().addAll("selected");
+                    break;
+                case "Zentralschweiz":
+                    INNER.getStyleClass().addAll("selected");
+                    break;
+                case "Graubünden":
+                    GR.getStyleClass().addAll("selected");
+                    break;
+                case "Nordschweiz/FR/GE":
+                    CH.getStyleClass().addAll("selected");
+                    break;
+            }
         }
     }
 
