@@ -1,5 +1,6 @@
 package ch.fhnw.oop2.skiareasfx.view;
 
+import ch.fhnw.oop2.skiareasfx.presentationmodel.RootPM;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
@@ -10,8 +11,10 @@ public class ToolbarHeader extends HBox implements ViewMixin {
 
     private TextField searchBar;
     private Button saveButton;
+    private RootPM model;
 
-    public ToolbarHeader() {
+    public ToolbarHeader(RootPM m) {
+        this.model = m;
         init();
     }
 
@@ -24,6 +27,11 @@ public class ToolbarHeader extends HBox implements ViewMixin {
     public void initializeControls() {
         saveButton = new Button("Save");
         searchBar = new TextField();
+    }
+
+    @Override
+    public void setupEventHandlers() {
+        saveButton.setOnAction(e -> model.save());
     }
 
     @Override
