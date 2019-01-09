@@ -36,7 +36,8 @@ public class ToolbarHeader extends HBox implements ViewMixin {
     @Override
     public void setupEventHandlers() {
         saveButton.setOnAction(e -> model.save());
-        addButton.setOnAction(event -> model.addSkiArea());
+        addButton.setOnAction(ee -> model.addSkiArea());
+        deleteButton.setOnAction(eee -> model.deleteSkiArea());
     }
 
     @Override

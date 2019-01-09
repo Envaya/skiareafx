@@ -82,7 +82,6 @@ public class RootPM {
         }
     }
 
-    //implement
     public void save() {
         try (BufferedWriter writer = Files.newBufferedWriter(getPath(FILE_NAME))) {
             writer.write("Switzerland's most famous SkiAreas");
@@ -109,7 +108,11 @@ public class RootPM {
         Skiarea lastSkiareaInList = skiAreaList.get(skiAreaList.size() -1);
         allSkiAreas.add(new Skiarea(lastSkiareaInList.getId() + 1));
         selectedSkiAreaIdProperty().setValue(lastSkiareaInList.getId() + 1);
+        System.out.println("trigger");
+    }
 
+    public void deleteSkiArea() {
+        allSkiAreas.removeIf(skiarea -> skiarea.getId() == (selectedSkiAreaIdProperty().intValue()));
     }
 
     private Stream<String> getStreamOfLines(String fileName) {
@@ -194,6 +197,4 @@ public class RootPM {
     public void setSelectedSkiAreaId(int selectedSkiAreaId) {
         this.selectedSkiAreaId.set(selectedSkiAreaId);
     }
-
-
 }

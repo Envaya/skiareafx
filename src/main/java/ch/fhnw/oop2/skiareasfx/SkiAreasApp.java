@@ -25,6 +25,7 @@ public class SkiAreasApp extends Application {
 		primaryStage.titleProperty().bind(rootPM.applicationTitleProperty());
 		primaryStage.setScene(scene);
 		primaryStage.show();
+//		primaryStage.setFullScreen(true);
 	}
 
 	public static void main(String[] args) {

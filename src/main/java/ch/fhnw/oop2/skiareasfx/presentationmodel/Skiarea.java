@@ -87,7 +87,7 @@ public class Skiarea {
         setCABLE_CARS(Integer.valueOf(line[9]));
         setLIFTS_TOTAL(Integer.valueOf(line[10]));
         setOPEN_LIFTS(Integer.valueOf(line[11]));
-//        setSNOW_DEPTH_CM(Integer.valueOf(line[12]));
+        setSNOW_DEPTH_CM(Integer.valueOf(line[12]));
         setVISITORS_TODAY(Integer.valueOf(line[13]));
         setCAR_FREE(Boolean.valueOf(line[14]));
         setFUNPARK_AVAILABLE(Boolean.valueOf(line[15]));
