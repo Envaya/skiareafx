@@ -68,24 +68,24 @@ public class RootPM {
     }
 
     //implement
-//    private void save() {
-//        try (BufferedWriter writer = Files.newBufferedWriter(getPath(FILE_NAME))) {
-//            writer.write("Switzerland's most famous SkiAreas");
-//            writer.newLine();
-//            skiAreas.stream()
-//                    .map(skiAreas -> skiAreas.infoAsLine(DELIMITER))
-//                    .forEach(line -> {
-//                        try {
-//                            writer.write((String) line);
-//                            writer.newLine();
-//                        } catch (IOException e) {
-//                            throw new IllegalStateException(e);
-//                        }
-//                    });
-//        } catch (IOException e) {
-//            throw new IllegalStateException("save failed");
-//        }
-//    }
+    public void save() {
+        try (BufferedWriter writer = Files.newBufferedWriter(getPath(FILE_NAME))) {
+            writer.write("Switzerland's most famous SkiAreas");
+            writer.newLine();
+            allSkiAreas.stream()
+                    .map(skiarea -> skiarea.infoAsLine(DELIMITER))
+                    .forEach(line -> {
+                        try {
+                            writer.write((String) line);
+                            writer.newLine();
+                        } catch (IOException e) {
+                            throw new IllegalStateException(e);
+                        }
+                    });
+        } catch (IOException e) {
+            throw new IllegalStateException("The skiarea couldn't be saved. Please try again.");
+        }
+    }
 
     private Stream<String> getStreamOfLines(String fileName) {
         try {
