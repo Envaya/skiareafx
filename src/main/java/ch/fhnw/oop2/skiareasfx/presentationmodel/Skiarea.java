@@ -27,10 +27,31 @@ public class Skiarea {
         //proxy
     }
 
-//    public Skiarea(int id){
-//        //create new "add"
-//        setId(id);
-//    }
+    public Skiarea(int id){
+        setId(id);
+    }
+
+    public String infoAsLine(String delimiter) {
+        return String.join(delimiter,
+                Integer.toString(getId()),
+                getSkiareaName(),
+                getRegion(),
+                getCOMMUNES_IN_AREA(),
+                Integer.toString(getMETERS_ABOVE_SEA_MIN()),
+                Integer.toString(getMETERS_ABOVE_SEA_MAX()),
+                Double.toString(getSKI_RUNS_KM()),
+                Integer.toString(getDRAG_LIFTS()),
+                Integer.toString(getCHAIR_LIFTS()),
+                Integer.toString(getCABLE_CARS()),
+                Integer.toString(getLIFTS_TOTAL()),
+                Integer.toString(getOPEN_LIFTS()),
+                Double.toString(getSNOW_DEPTH_CM()),
+                Integer.toString(getVISITORS_TODAY()),
+                Boolean.toString(isCAR_FREE()),
+                Boolean.toString(isFUNPARK_AVAILABLE()),
+                getIMAGE_URL()
+        );
+    }
 
 //    public Skiarea(int id, String skiareaName, String region, String communes, int masMin,
 //                   int masMax, double runsKm, int dragLifts, int chairLifts, int cableCars,
