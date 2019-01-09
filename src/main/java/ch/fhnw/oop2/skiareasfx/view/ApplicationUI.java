@@ -28,7 +28,7 @@ public class ApplicationUI extends BorderPane implements ViewMixin {
     @Override
     public void initializeControls() {
         button = new Button("Hello");
-        toolbar = new ToolbarHeader();
+        toolbar = new ToolbarHeader(model);
         skiAreaTable = new ContentLeft(model);
         skiAreaDetails = new ContentRight(model);
         skiAreaDetails.getStyleClass().add("content-left-container");
