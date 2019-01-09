@@ -36,17 +36,18 @@ public class RootPM {
 
         allSkiAreas.addAll(readFromFile());
 
-        if(selectedSkiAreaId.getValue().intValue() == -1) {
-            int firstSkiareaInListId;
-            Skiarea firstSkiareaInList;
-            if(!allSkiAreas.isEmpty()) {
-                 firstSkiareaInListId = allSkiAreas.get(0).idProperty().intValue();
-                 firstSkiareaInList = getSkiarea(firstSkiareaInListId);
-                if (firstSkiareaInList != null) {
-                    bindToProxy(firstSkiareaInList);
-                }
-            }
-        }
+
+//        if(selectedSkiAreaId.getValue().intValue() == -1) {
+//            int firstSkiareaInListId;
+//            Skiarea firstSkiareaInList;
+//            if(!allSkiAreas.isEmpty()) {
+//                 firstSkiareaInListId = allSkiAreas.get(0).idProperty().intValue();
+//                 firstSkiareaInList = getSkiarea(firstSkiareaInListId);
+//                if (firstSkiareaInList != null) {
+//                    bindToProxy(firstSkiareaInList);
+//                }
+//            }
+//        }
 
         //listen to when selected skiarea changes
         selectedSkiAreaIdProperty().addListener((observable, oldValue, newValue) -> {
