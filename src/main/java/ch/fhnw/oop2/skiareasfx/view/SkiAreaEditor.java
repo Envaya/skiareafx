@@ -132,4 +132,26 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
         openLifts.maxValueProperty().bindBidirectional(proxy.LIFTS_TOTALProperty());
         skiRegionControl.skiregionProperty().bindBidirectional(proxy.regionProperty());
     }
+    public void setUpValueChangeListener() {
+        dragLiftsField.textProperty().addListener(((observable, oldValue, newValue) -> {
+            if (newValue.isEmpty()) {
+                newValue = "0";
+            }
+            model.getSkiAreaProxy().LIFTS_TOTALProperty().setValue(model.getSkiAreaProxy().getCHAIR_LIFTS() + Integer.parseInt(newValue) + model.getSkiAreaProxy().getCABLE_CARS());
+        }));
+
+        chairLiftsField.textProperty().addListener(((observable, oldValue, newValue) -> {
+            if (newValue.isEmpty()) {
+                newValue = "0";
+            }
+            model.getSkiAreaProxy().LIFTS_TOTALProperty().setValue(model.getSkiAreaProxy().getDRAG_LIFTS() + Integer.parseInt(newValue) + model.getSkiAreaProxy().getCABLE_CARS());
+        }));
+
+        cableCarsField.textProperty().addListener(((observable, oldValue, newValue) -> {
+            if (newValue.isEmpty()) {
+                newValue = "0";
+            }
+            model.getSkiAreaProxy().LIFTS_TOTALProperty().setValue(model.getSkiAreaProxy().getCHAIR_LIFTS() + Integer.parseInt(newValue) + model.getSkiAreaProxy().getDRAG_LIFTS());
+        }));
+    }
 }

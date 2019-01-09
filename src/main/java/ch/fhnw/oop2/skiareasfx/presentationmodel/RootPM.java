@@ -114,8 +114,16 @@ public class RootPM {
         skiAreaProxy.skiareaNameProperty().bindBidirectional(skiarea.skiareaNameProperty());
         skiAreaProxy.regionProperty().bindBidirectional(skiarea.regionProperty());
         skiAreaProxy.OPEN_LIFTSProperty().bindBidirectional(skiarea.OPEN_LIFTSProperty());
-        skiAreaProxy.LIFTS_TOTALProperty().bindBidirectional(skiarea.LIFTS_TOTALProperty());
-        skiAreaProxy.regionProperty().bindBidirectional(skiarea.regionProperty());
+        skiAreaProxy.COMMUNES_IN_AREAProperty().bindBidirectional(skiarea.COMMUNES_IN_AREAProperty());
+        skiAreaProxy.METERS_ABOVE_SEA_MINProperty().bindBidirectional(skiarea.METERS_ABOVE_SEA_MINProperty());
+        skiAreaProxy.METERS_ABOVE_SEA_MAXProperty().bindBidirectional(skiarea.METERS_ABOVE_SEA_MAXProperty());
+        skiAreaProxy.DRAG_LIFTSProperty().bindBidirectional(skiarea.DRAG_LIFTSProperty());
+        skiAreaProxy.CHAIR_LIFTSProperty().bindBidirectional(skiarea.CHAIR_LIFTSProperty());
+        skiAreaProxy.CABLE_CARSProperty().bindBidirectional(skiarea.CABLE_CARSProperty());
+        skiAreaProxy.VISITORS_TODAYProperty().bindBidirectional(skiarea.VISITORS_TODAYProperty());
+        skiAreaProxy.CAR_FREEProperty().bindBidirectional(skiarea.CAR_FREEProperty());
+        skiAreaProxy.FUNPARK_AVAILABLEProperty().bindBidirectional(skiarea.FUNPARK_AVAILABLEProperty());
+        skiAreaProxy.IMAGE_URLProperty().bindBidirectional(skiarea.IMAGE_URLProperty());
     }
 
     private void unbindFromProxy(Skiarea skiarea) {
@@ -124,7 +132,16 @@ public class RootPM {
         skiAreaProxy.regionProperty().unbindBidirectional(skiarea.regionProperty());
         skiAreaProxy.OPEN_LIFTSProperty().unbindBidirectional(skiarea.OPEN_LIFTSProperty());
         skiAreaProxy.LIFTS_TOTALProperty().unbindBidirectional(skiarea.LIFTS_TOTALProperty());
-        skiAreaProxy.regionProperty().unbindBidirectional(skiarea.regionProperty());
+        skiAreaProxy.COMMUNES_IN_AREAProperty().unbindBidirectional(skiarea.COMMUNES_IN_AREAProperty());
+        skiAreaProxy.METERS_ABOVE_SEA_MINProperty().unbindBidirectional(skiarea.METERS_ABOVE_SEA_MINProperty());
+        skiAreaProxy.METERS_ABOVE_SEA_MAXProperty().unbindBidirectional(skiarea.METERS_ABOVE_SEA_MAXProperty());
+        skiAreaProxy.DRAG_LIFTSProperty().unbindBidirectional(skiarea.DRAG_LIFTSProperty());
+        skiAreaProxy.CHAIR_LIFTSProperty().unbindBidirectional(skiarea.CHAIR_LIFTSProperty());
+        skiAreaProxy.CABLE_CARSProperty().unbindBidirectional(skiarea.CABLE_CARSProperty());
+        skiAreaProxy.VISITORS_TODAYProperty().unbindBidirectional(skiarea.VISITORS_TODAYProperty());
+        skiAreaProxy.CAR_FREEProperty().unbindBidirectional(skiarea.CAR_FREEProperty());
+        skiAreaProxy.FUNPARK_AVAILABLEProperty().unbindBidirectional(skiarea.FUNPARK_AVAILABLEProperty());
+        skiAreaProxy.IMAGE_URLProperty().unbindBidirectional(skiarea.IMAGE_URLProperty());
     }
 
     private Skiarea getSkiarea(int id) {

@@ -94,7 +94,6 @@ public class Skiarea {
         String s =(line[16]);
         setIMAGE_URL(s);
     }
-
     public int getId() {
         return id.get();
     }
@@ -298,4 +297,5 @@ public class Skiarea {
     public void setIMAGE_URL(String IMAGE_URL) {
         this.IMAGE_URL.set(IMAGE_URL);
     }
+
 }
