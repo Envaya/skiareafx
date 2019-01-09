@@ -53,7 +53,6 @@ public class ContentLeft extends VBox implements ViewMixin {
                 .selectedItemProperty()
                 .addListener((observable, oldValue, newValue) -> {
                     model.selectedSkiAreaIdProperty().setValue(newValue.getId());
-                    System.out.print(newValue.getId());
                 });
     }
 }

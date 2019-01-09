@@ -4,18 +4,16 @@ import ch.fhnw.oop2.skiareasfx.Control.OpenLiftsGraph;
 import ch.fhnw.oop2.skiareasfx.presentationmodel.RootPM;
 import ch.fhnw.oop2.skiareasfx.presentationmodel.Skiarea;
 import ch.fhnw.oop2.skiareasfx.skiregion_cc.SkiregionControl;
-import javafx.scene.control.Button;
+import javafx.geometry.HPos;
+import javafx.geometry.Pos;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.RowConstraints;
 import javafx.util.converter.NumberStringConverter;
 import javafx.scene.layout.ColumnConstraints;
-
-import java.util.Locale;
 
 public class SkiAreaEditor extends GridPane implements ViewMixin {
     private RootPM model;
@@ -56,17 +54,20 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
     private TextField visitorsTodayField;
 
     private Label carFreeLabel;
-    private CheckBox carFree;
+    private CheckBox carFreeBox;
 
-    private Label funparkOpenLabel;
-    private CheckBox funparkOpenField;
+    private Label funparkAvailableLabel;
+    private CheckBox funparkAvailableBox;
 
     private Label imageURLLabel;
     private TextField imageURLField;
 
-    private TextField textFieldOpenLifts;
+    private Label openLiftsLabel;
+    private TextField openLiftsField;
 
     private SkiregionControl skiRegionControl;
+
+    private static final double MAXIMUM_SIZE = 100;
 
     public SkiAreaEditor(RootPM model) {
         this.model = model;
@@ -85,20 +86,34 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
         regionLabel = new Label("Gebiet");
         regionField = new TextField();
         communesInAreaLabel = new Label("Orte im Gebiet");
+        communesInAreaField = new TextField();
         metersAboveSeaMinLabel = new Label("Talstation (m.ü.M)");
+        metersAboveSeaMinField = new TextField();
         metersAboveSeaMaxLabel = new Label("Bergstation (m.ü.M.)");
+        metersAboveSeaMaxField = new TextField();
         runsKMLabel = new Label("Pistenlänge (km)");
+        runsKMField = new TextField();
         dragLiftsLabel = new Label("Schlepplifte");
+        dragLiftsField = new TextField();
         chairLiftsLabel = new Label("Sessellifte");
+        chairLiftsField = new TextField();
         cableCarsLabel = new Label("Gondeln");
+        cableCarsField = new TextField();
         snowDepthLabel = new Label("Schneehöhe (cm)");
+        snowDepthField = new TextField();
         visitorsTodayLabel = new Label("Besucher");
+        visitorsTodayField = new TextField();
         carFreeLabel = new Label("autofrei");
-        funparkOpenLabel = new Label("Funpark geöffnet");
+        carFreeBox = new CheckBox();
+        funparkAvailableLabel = new Label("Funpark geöffnet");
+        funparkAvailableBox = new CheckBox();
         imageURLLabel = new Label("Bild URL");
+        imageURLField = new TextField();
+
+        openLiftsLabel = new Label("Lifte offen");
+        openLiftsField= new TextField();
 
         openLifts = new OpenLiftsGraph();
-        textFieldOpenLifts = new TextField();
         skiRegionControl = new SkiregionControl();
     }
 
@@ -106,18 +121,61 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
     public void layoutControls() {
         ColumnConstraints colConstrGrow = new ColumnConstraints();
         ColumnConstraints containCol = new ColumnConstraints();
-        colConstrGrow.setHgrow(Priority.ALWAYS);
+//        colConstrGrow.setHgrow(Priority.ALWAYS);
         getColumnConstraints().addAll(containCol,colConstrGrow,containCol,colConstrGrow);
+        colConstrGrow.setHalignment(HPos.LEFT);
+        regionField.setPrefSize(140,20);
+        setAlignment(Pos.CENTER);
 
         RowConstraints rowConstr = new RowConstraints();
         rowConstr.setVgrow(Priority.ALWAYS);
-        getRowConstraints().addAll(rowConstr, rowConstr);
+        getRowConstraints().addAll(rowConstr, rowConstr, rowConstr, rowConstr, rowConstr, rowConstr, rowConstr, rowConstr, rowConstr, rowConstr, rowConstr, rowConstr);
+        setHgap(15);
+        setVgap(20);
+
+
         add(nameLabel, 0,0);
         add(nameField, 1,0);
         add(regionLabel, 2,0);
         add(regionField, 3,0);
-        add(openLifts, 1,1);
-        add(skiRegionControl, 1,2);
+
+        add(communesInAreaLabel, 0,1);
+        add(communesInAreaField, 1,1,3,1);
+
+        add(metersAboveSeaMinLabel,0,2);
+        add(metersAboveSeaMinField,1,2);
+        add(metersAboveSeaMaxLabel,2,2);
+        add(metersAboveSeaMaxField,3,2);
+
+        add(runsKMLabel,0,3);
+        add(runsKMField,1,3);
+        add(dragLiftsLabel,2,3);
+        add(dragLiftsField,3,3);
+
+        add(chairLiftsLabel,0,4);
+        add(chairLiftsField,1,4);
+        add(cableCarsLabel,2,4);
+        add(cableCarsField,3,4);
+
+        add(snowDepthLabel,0,5);
+        add(snowDepthField,1,5);
+        add(visitorsTodayLabel,2,5);
+        add(visitorsTodayField,3,5);
+
+        add(carFreeLabel,0,6);
+        add(carFreeBox,1,6);
+        add(funparkAvailableLabel,2,6);
+        add(funparkAvailableBox,3,6);
+
+        add(imageURLLabel,0,7);
+        add(imageURLField,1,7,3,1);
+
+        add(openLiftsLabel,0,8);
+        add(openLiftsField,1,8);
+
+
+//        add(openLifts, 1,1);
+//        add(skiRegionControl, 1,2);
     }
 
     @Override
@@ -127,12 +185,27 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
         Skiarea proxy = model.getSkiAreaProxy();
         nameField.textProperty().bindBidirectional(proxy.skiareaNameProperty());
         regionField.textProperty().bindBidirectional(proxy.regionProperty());
-        textFieldOpenLifts.textProperty().bindBidirectional(proxy.OPEN_LIFTSProperty(), new NumberStringConverter());
+        communesInAreaField.textProperty().bindBidirectional(proxy.COMMUNES_IN_AREAProperty());
+        metersAboveSeaMinField.textProperty().bindBidirectional(proxy.METERS_ABOVE_SEA_MINProperty(), new NumberStringConverter());
+        metersAboveSeaMaxField.textProperty().bindBidirectional(proxy.METERS_ABOVE_SEA_MINProperty(), new NumberStringConverter());
+        runsKMField.textProperty().bindBidirectional(proxy.SKI_RUNS_KMProperty(), new NumberStringConverter());
+        dragLiftsField.textProperty().bindBidirectional(proxy.DRAG_LIFTSProperty(), new NumberStringConverter());
+        chairLiftsField.textProperty().bindBidirectional(proxy.CHAIR_LIFTSProperty(), new NumberStringConverter());
+        cableCarsField.textProperty().bindBidirectional(proxy.CABLE_CARSProperty(), new NumberStringConverter());
+        snowDepthField.textProperty().bindBidirectional(proxy.SNOW_DEPTH_CMProperty(), new NumberStringConverter());
+        visitorsTodayField.textProperty().bindBidirectional(proxy.VISITORS_TODAYProperty(), new NumberStringConverter());
+        carFreeBox.allowIndeterminateProperty().bindBidirectional(proxy.CAR_FREEProperty());
+        funparkAvailableBox.allowIndeterminateProperty().bindBidirectional(proxy.FUNPARK_AVAILABLEProperty());
+        imageURLField.textProperty().bindBidirectional(proxy.IMAGE_URLProperty());
+
+        openLiftsField.textProperty().bindBidirectional(proxy.OPEN_LIFTSProperty(), new NumberStringConverter());
         openLifts.valueProperty().bindBidirectional(proxy.OPEN_LIFTSProperty());
         openLifts.maxValueProperty().bindBidirectional(proxy.LIFTS_TOTALProperty());
         skiRegionControl.skiregionProperty().bindBidirectional(proxy.regionProperty());
     }
-    public void setUpValueChangeListener() {
+
+    @Override
+    public void setupValueChangedListeners() {
         dragLiftsField.textProperty().addListener(((observable, oldValue, newValue) -> {
             if (newValue.isEmpty()) {
                 newValue = "0";
