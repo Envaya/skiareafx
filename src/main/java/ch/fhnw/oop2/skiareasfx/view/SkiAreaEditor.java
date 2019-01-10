@@ -44,8 +44,6 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
     private Label cableCarsLabel;
     private TextField cableCarsField;
 
-    private OpenLiftsGraph openLifts;
-
     private Label snowDepthLabel;
     private TextField snowDepthField;
 
@@ -109,8 +107,6 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
 
         openLiftsLabel = new Label("Lifte offen");
         openLiftsField= new TextField();
-
-        openLifts = new OpenLiftsGraph();
     }
 
     @Override
@@ -168,9 +164,6 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
 
         add(openLiftsLabel,0,8);
         add(openLiftsField,1,8);
-
-
-        add(openLifts, 1,9,4,1);
     }
 
     @Override
@@ -194,8 +187,6 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
         imageURLField.textProperty().bindBidirectional(proxy.IMAGE_URLProperty());
 
         openLiftsField.textProperty().bindBidirectional(proxy.OPEN_LIFTSProperty(), new NumberStringConverter());
-        openLifts.valueProperty().bindBidirectional(proxy.OPEN_LIFTSProperty());
-        openLifts.maxValueProperty().bindBidirectional(proxy.LIFTS_TOTALProperty());
     }
 
     @Override

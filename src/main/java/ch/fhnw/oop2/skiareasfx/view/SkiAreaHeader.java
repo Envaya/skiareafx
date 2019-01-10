@@ -4,12 +4,15 @@ import ch.fhnw.oop2.skiareasfx.presentationmodel.RootPM;
 import ch.fhnw.oop2.skiareasfx.presentationmodel.Skiarea;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.RowConstraints;
 import javafx.util.converter.NumberStringConverter;
 
+import java.awt.*;
 import java.util.Locale;
 
 public class SkiAreaHeader extends GridPane implements ViewMixin {
@@ -17,6 +20,7 @@ public class SkiAreaHeader extends GridPane implements ViewMixin {
     private Label regionName;
     private Label skiAreaName;
     private Label snowHeight;
+    private Image skiAreaImage;
 
     public SkiAreaHeader(RootPM model) {
         this.model = model;
@@ -34,6 +38,8 @@ public class SkiAreaHeader extends GridPane implements ViewMixin {
         skiAreaName = new Label();
         snowHeight = new Label();
         skiAreaName.getStyleClass().add("skiarea-header-title");
+//        skiAreaImage = new Image(model.getSkiAreaProxy().IMAGE_URLProperty().toString());
+
     }
 
     @Override
@@ -49,6 +55,7 @@ public class SkiAreaHeader extends GridPane implements ViewMixin {
         add(skiAreaName, 0,0);
         add(regionName, 0,1);
         add(snowHeight,0,2);
+//        add(new ImageView(skiAreaImage),3,0,2,2);
     }
 
     @Override
