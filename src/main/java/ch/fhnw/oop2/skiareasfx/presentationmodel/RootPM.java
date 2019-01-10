@@ -139,6 +139,8 @@ public class RootPM {
         skiAreaProxy.CAR_FREEProperty().bindBidirectional(skiarea.CAR_FREEProperty());
         skiAreaProxy.FUNPARK_AVAILABLEProperty().bindBidirectional(skiarea.FUNPARK_AVAILABLEProperty());
         skiAreaProxy.IMAGE_URLProperty().bindBidirectional(skiarea.IMAGE_URLProperty());
+        skiAreaProxy.SNOW_DEPTH_CMProperty().bindBidirectional(skiarea.SNOW_DEPTH_CMProperty());
+        skiAreaProxy.SKI_RUNS_KMProperty().bindBidirectional(skiarea.SKI_RUNS_KMProperty());
     }
 
     private void unbindFromProxy(Skiarea skiarea) {
@@ -157,6 +159,9 @@ public class RootPM {
         skiAreaProxy.CAR_FREEProperty().unbindBidirectional(skiarea.CAR_FREEProperty());
         skiAreaProxy.FUNPARK_AVAILABLEProperty().unbindBidirectional(skiarea.FUNPARK_AVAILABLEProperty());
         skiAreaProxy.IMAGE_URLProperty().unbindBidirectional(skiarea.IMAGE_URLProperty());
+        skiAreaProxy.SNOW_DEPTH_CMProperty().unbindBidirectional(skiarea.SNOW_DEPTH_CMProperty());
+        skiAreaProxy.SKI_RUNS_KMProperty().unbindBidirectional(skiarea.SKI_RUNS_KMProperty());
+        skiAreaProxy.VISITORS_TODAYProperty().unbindBidirectional(skiarea.VISITORS_TODAYProperty());
     }
 
     private Skiarea getSkiarea(int id) {
