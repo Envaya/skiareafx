@@ -9,7 +9,6 @@ import javax.swing.text.View;
 
 public class ToolbarHeader extends HBox implements ViewMixin {
 
-    private TextField searchBar;
     private Button saveButton;
     private Button addButton;
     private Button deleteButton;
@@ -30,7 +29,6 @@ public class ToolbarHeader extends HBox implements ViewMixin {
         saveButton = new Button("Speichern");
         addButton = new Button("Neu");
         deleteButton = new Button("Löschen");
-        searchBar = new TextField();
     }
 
     @Override
@@ -42,6 +40,6 @@ public class ToolbarHeader extends HBox implements ViewMixin {
 
     @Override
     public void layoutControls() {
-        getChildren().addAll(searchBar, saveButton, addButton, deleteButton);
+        getChildren().addAll(saveButton, addButton, deleteButton);
     }
 }

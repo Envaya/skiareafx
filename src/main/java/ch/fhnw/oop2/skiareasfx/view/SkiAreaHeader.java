@@ -16,6 +16,7 @@ public class SkiAreaHeader extends GridPane implements ViewMixin {
     private RootPM model;
     private Label regionName;
     private Label skiAreaName;
+    private Label snowHeight;
 
     public SkiAreaHeader(RootPM model) {
         this.model = model;
@@ -31,6 +32,7 @@ public class SkiAreaHeader extends GridPane implements ViewMixin {
     public void initializeControls() {
         regionName = new Label();
         skiAreaName = new Label();
+        snowHeight = new Label();
         skiAreaName.getStyleClass().add("skiarea-header-title");
     }
 
@@ -46,6 +48,7 @@ public class SkiAreaHeader extends GridPane implements ViewMixin {
         getRowConstraints().addAll(rowConstr, rowConstr, rowConstr, rowConstr);
         add(skiAreaName, 0,0);
         add(regionName, 0,1);
+        add(snowHeight,0,2);
     }
 
     @Override
@@ -55,5 +58,6 @@ public class SkiAreaHeader extends GridPane implements ViewMixin {
         Skiarea proxy = model.getSkiAreaProxy();
         skiAreaName.textProperty().bind(proxy.skiareaNameProperty());
         regionName.textProperty().bind(proxy.regionProperty());
+//        snowHeight.textProperty().bind(model.getSkiAreaProxy().SNOW_DEPTH_CMProperty().asString("%d cm Schnee"));
     }
 }

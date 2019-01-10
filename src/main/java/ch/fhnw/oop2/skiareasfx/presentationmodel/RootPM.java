@@ -36,7 +36,7 @@ public class RootPM {
 
         allSkiAreas.addAll(readFromFile());
 
-
+//         Method to show first skiarea of list upon program start
 //        if(selectedSkiAreaId.getValue().intValue() == -1) {
 //            int firstSkiareaInListId;
 //            Skiarea firstSkiareaInList;

@@ -3,7 +3,6 @@ package ch.fhnw.oop2.skiareasfx.view;
 import ch.fhnw.oop2.skiareasfx.Control.OpenLiftsGraph;
 import ch.fhnw.oop2.skiareasfx.presentationmodel.RootPM;
 import ch.fhnw.oop2.skiareasfx.presentationmodel.Skiarea;
-import ch.fhnw.oop2.skiareasfx.skiregion_cc.SkiregionControl;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.scene.control.CheckBox;
@@ -65,8 +64,6 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
     private Label openLiftsLabel;
     private TextField openLiftsField;
 
-    private SkiregionControl skiRegionControl;
-
     private static final double MAXIMUM_SIZE = 100;
 
     public SkiAreaEditor(RootPM model) {
@@ -114,7 +111,6 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
         openLiftsField= new TextField();
 
         openLifts = new OpenLiftsGraph();
-        skiRegionControl = new SkiregionControl();
     }
 
     @Override
@@ -130,8 +126,8 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
         RowConstraints rowConstr = new RowConstraints();
         rowConstr.setVgrow(Priority.ALWAYS);
         getRowConstraints().addAll(rowConstr, rowConstr, rowConstr, rowConstr, rowConstr, rowConstr, rowConstr, rowConstr, rowConstr, rowConstr, rowConstr, rowConstr);
-        setHgap(15);
-        setVgap(20);
+        setHgap(12);
+        setVgap(10);
 
 
         add(nameLabel, 0,0);
@@ -175,7 +171,6 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
 
 
 //        add(openLifts, 1,1);
-//        add(skiRegionControl, 1,2);
     }
 
     @Override
@@ -194,14 +189,13 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
         cableCarsField.textProperty().bindBidirectional(proxy.CABLE_CARSProperty(), new NumberStringConverter());
         snowDepthField.textProperty().bindBidirectional(proxy.SNOW_DEPTH_CMProperty(), new NumberStringConverter());
         visitorsTodayField.textProperty().bindBidirectional(proxy.VISITORS_TODAYProperty(), new NumberStringConverter());
-        carFreeBox.allowIndeterminateProperty().bindBidirectional(proxy.CAR_FREEProperty());
-        funparkAvailableBox.allowIndeterminateProperty().bindBidirectional(proxy.FUNPARK_AVAILABLEProperty());
+        carFreeBox.selectedProperty().bindBidirectional(proxy.CAR_FREEProperty());
+        funparkAvailableBox.selectedProperty().bindBidirectional(proxy.FUNPARK_AVAILABLEProperty());
         imageURLField.textProperty().bindBidirectional(proxy.IMAGE_URLProperty());
 
         openLiftsField.textProperty().bindBidirectional(proxy.OPEN_LIFTSProperty(), new NumberStringConverter());
         openLifts.valueProperty().bindBidirectional(proxy.OPEN_LIFTSProperty());
         openLifts.maxValueProperty().bindBidirectional(proxy.LIFTS_TOTALProperty());
-        skiRegionControl.skiregionProperty().bindBidirectional(proxy.regionProperty());
     }
 
     @Override

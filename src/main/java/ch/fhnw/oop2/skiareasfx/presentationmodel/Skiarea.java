@@ -21,8 +21,6 @@ public class Skiarea {
     private final BooleanProperty FUNPARK_AVAILABLE = new SimpleBooleanProperty();
     private final StringProperty IMAGE_URL = new SimpleStringProperty();
 
-
-
     public Skiarea(){
         //proxy
     }
@@ -45,34 +43,13 @@ public class Skiarea {
                 Integer.toString(getCABLE_CARS()),
                 Integer.toString(getLIFTS_TOTAL()),
                 Integer.toString(getOPEN_LIFTS()),
-                Integer.toString((int)getSNOW_DEPTH_CM()),
+                Integer.toString(getSNOW_DEPTH_CM()),
                 Integer.toString(getVISITORS_TODAY()),
                 Boolean.toString(isCAR_FREE()),
                 Boolean.toString(isFUNPARK_AVAILABLE()),
                 getIMAGE_URL()
         );
     }
-
-//    public Skiarea(int id, String skiareaName, String region, String communes, int masMin,
-//                   int masMax, double runsKm, int dragLifts, int chairLifts, int cableCars,
-//                   int liftsTotal, double snowDepth, int visitors, boolean carFree, boolean funparkAvailable, String imgURL) {
-//        setId(id);
-//        setSkiareaName(skiareaName);
-//        setRegion(region);
-//        setCOMMUNES_IN_AREA(communes);
-//        setMETERS_ABOVE_SEA_MIN(masMin);
-//        setMETERS_ABOVE_SEA_MAX(masMax);
-//        setSKI_RUNS_KM(runsKm);
-//        setDRAG_LIFTS(dragLifts);
-//        setCHAIR_LIFTS(chairLifts);
-//        setCABLE_CARS(cableCars);
-//        setLIFTS_TOTAL(liftsTotal);
-//        setSNOW_DEPTH_CM(snowDepth);
-//        setVISITORS_TODAY(visitors);
-//        setCAR_FREE(carFree);
-//        setFUNPARK_AVAILABLE(funparkAvailable);
-//        setIMAGE_URL(imgURL);
-//    }
 
     public Skiarea(String[] line) {
         setId(Integer.valueOf(line[0]));

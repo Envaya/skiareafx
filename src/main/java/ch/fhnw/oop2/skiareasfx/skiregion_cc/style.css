@@ -61,7 +61,5 @@ skiregioncontrol {
 }
 
 .map {
-    -fx-border-color: red;
-    -fx-border-width: 5px;
 }
 
