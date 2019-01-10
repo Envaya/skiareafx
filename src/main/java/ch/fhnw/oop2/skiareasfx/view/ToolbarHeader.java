@@ -3,6 +3,8 @@ package ch.fhnw.oop2.skiareasfx.view;
 import ch.fhnw.oop2.skiareasfx.presentationmodel.RootPM;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javax.swing.text.View;
@@ -26,9 +28,17 @@ public class ToolbarHeader extends HBox implements ViewMixin {
 
     @Override
     public void initializeControls() {
-        saveButton = new Button("Speichern");
-        addButton = new Button("Neu");
-        deleteButton = new Button("Löschen");
+        saveButton = new Button();
+        addButton = new Button();
+        deleteButton = new Button();
+        Image saveIcon = new Image(getClass().getResourceAsStream("/icons/save.png"), 16,24, true, true);
+        Image deleteIcon = new Image(getClass().getResourceAsStream("/icons/delete.png"), 16,24, true, true);
+        Image addIcon = new Image(getClass().getResourceAsStream("/icons/add.png"), 16,24, true, true);
+        saveButton.setGraphic(new ImageView(saveIcon));
+        deleteButton.setGraphic(new ImageView(deleteIcon));
+        addButton.setGraphic(new ImageView(addIcon));
+
+        setSpacing(10);
     }
 
     @Override

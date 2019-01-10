@@ -24,9 +24,15 @@ public class ContentRight extends VBox implements ViewMixin {
         skiAreaEditor = new SkiAreaEditor(model);
         skiRegionControl = new SkiregionControl();
         skiRegionControl.setMaxWidth(200);
+        skiAreaHeader.minHeight(200);
 
         //horizontally center the content in the editor
         skiAreaEditor.setAlignment(Pos.CENTER);
+    }
+
+    @Override
+    public void initializeSelf() {
+        getStyleClass().add("content");
     }
 
     @Override

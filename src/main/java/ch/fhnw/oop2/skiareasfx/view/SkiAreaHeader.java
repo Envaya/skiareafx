@@ -58,6 +58,6 @@ public class SkiAreaHeader extends GridPane implements ViewMixin {
         Skiarea proxy = model.getSkiAreaProxy();
         skiAreaName.textProperty().bind(proxy.skiareaNameProperty());
         regionName.textProperty().bind(proxy.regionProperty());
-//        snowHeight.textProperty().bind(model.getSkiAreaProxy().SNOW_DEPTH_CMProperty().asString("%d cm Schnee"));
+        snowHeight.textProperty().bind(model.getSkiAreaProxy().SNOW_DEPTH_CMProperty().asString("%d cm Schnee"));
     }
 }

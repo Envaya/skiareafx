@@ -109,7 +109,6 @@ public class RootPM {
         Skiarea lastSkiareaInList = skiAreaList.get(skiAreaList.size() -1);
         allSkiAreas.add(new Skiarea(lastSkiareaInList.getId() + 1));
         selectedSkiAreaIdProperty().setValue(lastSkiareaInList.getId() + 1);
-        System.out.println("trigger");
     }
 
     public void deleteSkiArea() {

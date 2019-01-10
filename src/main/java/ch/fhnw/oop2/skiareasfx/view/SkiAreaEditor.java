@@ -170,7 +170,7 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
         add(openLiftsField,1,8);
 
 
-//        add(openLifts, 1,1);
+        add(openLifts, 1,9,4,1);
     }
 
     @Override
