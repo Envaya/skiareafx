@@ -1,6 +1,8 @@
 package ch.fhnw.oop2.skiareasfx.presentationmodel;
 
 import javafx.beans.property.*;
+import javafx.beans.value.ChangeListener;
+import javafx.scene.paint.Color;
 
 public class Skiarea {
     private final IntegerProperty id = new SimpleIntegerProperty();
@@ -23,6 +25,13 @@ public class Skiarea {
 
     public Skiarea(){
         //proxy
+
+        ChangeListener<Number> listener = (observable, oldValue, newValue) -> {
+            LIFTS_TOTALProperty().setValue(DRAG_LIFTSProperty().intValue() + CHAIR_LIFTSProperty().intValue() + CABLE_CARSProperty().intValue());
+        };
+        DRAG_LIFTSProperty().addListener(listener);
+        CHAIR_LIFTSProperty().addListener(listener);
+        CABLE_CARSProperty().addListener(listener);
     }
 
     public Skiarea(int id){

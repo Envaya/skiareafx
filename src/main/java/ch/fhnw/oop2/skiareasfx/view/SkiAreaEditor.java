@@ -189,27 +189,27 @@ public class SkiAreaEditor extends GridPane implements ViewMixin {
         openLiftsField.textProperty().bindBidirectional(proxy.OPEN_LIFTSProperty(), new NumberStringConverter());
     }
 
-    @Override
-    public void setupValueChangedListeners() {
-        dragLiftsField.textProperty().addListener(((observable, oldValue, newValue) -> {
-            if (newValue.isEmpty()) {
-                newValue = "0";
-            }
-            model.getSkiAreaProxy().LIFTS_TOTALProperty().setValue(model.getSkiAreaProxy().getCHAIR_LIFTS() + Integer.parseInt(newValue) + model.getSkiAreaProxy().getCABLE_CARS());
-        }));
-
-        chairLiftsField.textProperty().addListener(((observable, oldValue, newValue) -> {
-            if (newValue.isEmpty()) {
-                newValue = "0";
-            }
-            model.getSkiAreaProxy().LIFTS_TOTALProperty().setValue(model.getSkiAreaProxy().getDRAG_LIFTS() + Integer.parseInt(newValue) + model.getSkiAreaProxy().getCABLE_CARS());
-        }));
-
-        cableCarsField.textProperty().addListener(((observable, oldValue, newValue) -> {
-            if (newValue.isEmpty()) {
-                newValue = "0";
-            }
-            model.getSkiAreaProxy().LIFTS_TOTALProperty().setValue(model.getSkiAreaProxy().getCHAIR_LIFTS() + Integer.parseInt(newValue) + model.getSkiAreaProxy().getDRAG_LIFTS());
-        }));
-    }
+//    @Override
+//    public void setupValueChangedListeners() {
+//        dragLiftsField.textProperty().addListener(((observable, oldValue, newValue) -> {
+//            if (newValue.isEmpty()) {
+//                newValue = "0";
+//            }
+//            model.getSkiAreaProxy().LIFTS_TOTALProperty().setValue(model.getSkiAreaProxy().getCHAIR_LIFTS() + Integer.parseInt(newValue) + model.getSkiAreaProxy().getCABLE_CARS());
+//        }));
+//
+//        chairLiftsField.textProperty().addListener(((observable, oldValue, newValue) -> {
+//            if (newValue.isEmpty()) {
+//                newValue = "0";
+//            }
+//            model.getSkiAreaProxy().LIFTS_TOTALProperty().setValue(model.getSkiAreaProxy().getDRAG_LIFTS() + Integer.parseInt(newValue) + model.getSkiAreaProxy().getCABLE_CARS());
+//        }));
+//
+//        cableCarsField.textProperty().addListener(((observable, oldValue, newValue) -> {
+//            if (newValue.isEmpty()) {
+//                newValue = "0";
+//            }
+//            model.getSkiAreaProxy().LIFTS_TOTALProperty().setValue(model.getSkiAreaProxy().getCHAIR_LIFTS() + Integer.parseInt(newValue) + model.getSkiAreaProxy().getDRAG_LIFTS());
+//        }));
+//    }
 }
