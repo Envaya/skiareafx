@@ -1,7 +1,7 @@
 # OOP2 Programmierprojekt 3Ia HS18
 
 ## Bearbeitet von
- - Vorname Nachname
+ - Niki Vögtli
 
 ## Abgabe
 - Donnerstag, 10.1.2019, 18:00 Uhr
